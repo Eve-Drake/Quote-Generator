@@ -4,7 +4,7 @@ import DisplayQuote from './DisplayQuote'
 import GetQuote from './GetQuote'
 
 function App() {
-  const [quote, setQuote] = useState()
+  const [quote, setQuote] = useState({})
 
   return (
     <>

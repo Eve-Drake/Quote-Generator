@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const GetQuote = ({setQuote}) => {
-
+  
+    useEffect(() =>{
+        getQuote()
+    },[])
+    
     const getQuote =()=>{
         try{
             fetch('https://api.quotable.io/random?')
@@ -14,6 +18,8 @@ const GetQuote = ({setQuote}) => {
             console.error(err)
         }
     }
+
+  
   return (
     <button onClick={getQuote}>Generate New Quote</button>
   )
